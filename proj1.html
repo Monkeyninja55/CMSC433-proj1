@@ -1,0 +1,73 @@
+<!--Kush Patel -->
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="stylesheet" type="text/css" href="proj1.css">
+</head>
+<body>
+
+<audio autoplay loop>
+	<source src="audio/Theme.mp3" type="audio/mpeg"/>
+</audio>
+
+<audio id="congrats" src="audio/congrats.mp3" preload="auto"></audio>
+
+<button class="button1" id="but1"
+    type="button" onclick="beginDraw()">Let Me Play!
+</button>
+
+<button class="button2" id="but2"
+    type="button" onclick="checkPass()">Student Progress
+</button>
+
+<button id="but3" type="button" 
+    onclick="refreshGame()" style="display:none;">Back
+</button>
+
+<div id="tip" style="display:none;">
+    Newest entries at the top of the table.
+</div>
+
+<div id="avg" style="display:none;">
+
+
+</div>
+
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<form id="form1" style="display:none;" onsubmit="return validateForm()">
+    
+    <div class="hint">Directions: Enter the number of 
+        Hours, Minutes and Seconds on the clock below
+        (HINT: Hours is the shortest hand).
+    </div>
+
+    <div class="textFName">First Name:</div>
+    <input type="text" name="fnames" class="fname"
+        placeholder="Your first name"/>
+
+    <div class="textLName">Last Name:</div>
+    <input type="text" name="lnames" class="lname"
+        placeholder="Your last name"/>
+
+    <div class="textHour">Hours:</div>
+    <input type="number" name="hours" class="hour"
+        min="1" max="12"/>
+
+    <div class="textMinute">Minutes:</div>
+    <input type="number" name="minutes" class="minute"
+        min="0" max="60"/>
+    
+    <div class="textSecond">Seconds:</div>
+    <input type="number" name="seconds" class="second"
+        min="0" max="60"/>
+    
+    <input type="submit" value="Submit" class="butts1"/>
+</form>
+
+<table id="studTable" style="display:none;">
+</table>
+
+<script src="proj1.js"></script>
+</body>
+</html>
